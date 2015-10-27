@@ -119,6 +119,7 @@ public class MapTestActivity extends ActionBarActivity
         public boolean onQueryTextSubmit(String searchWord) {
         	// Clear all marker
         	mPlaceInfoList.clear();
+            mMap.clear();
 
         	// Run SearchKeywordTask
             mSearchKeywordTask = new SearchPlaceTask(mMap, mPlaceInfoList, getApplicationContext());
