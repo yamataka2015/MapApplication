@@ -10,7 +10,12 @@ import android.view.View;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 //comment mori
+
+// test comment by masaki-n 001
+
+
 public class MainActivity extends AppCompatActivity
+// test comment by masaki-n 002
 {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
