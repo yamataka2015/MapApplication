@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    class="com.google.android.gms.maps.SupportMapFragment"
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    map:cameraTargetLat="36.725310"
+    map:cameraTargetLng="137.0968171"
+    map:cameraZoom="18"
+ />
+<!-- From: file:/C:/Users/yamazaki/Desktop/Android_Work/sprint1/MapApplication/MapApplication/app/src/main/res/layout/include_map_test.xml -->

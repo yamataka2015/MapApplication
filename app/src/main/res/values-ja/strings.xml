@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MapApplication</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="filename">userid</string>
+
+    <!-- Project Code  -->
+    <string name="ProjectCode">JPN00</string>
+
+    <!-- Server URLs --><!--★★mail.tym-bit.com-->
+    <string name="URL_SearchPlace">http://mail.tym-bit.com/php_e/SearchPlace.php</string>
+    <string name="URL_SearchComment">http://mail.tym-bit.com/php_e/SearchComment.php</string>
+    <string name="URL_AddPlace">http://mail.tym-bit.com/php_e/AddPlace.php</string>
+    <string name="URL_AddComment">http://mail.tym-bit.com/php_e/AddComment.php</string>
+    <string name="URL_UserRegist">http://mail.tym-bit.com/php_e/UserRegistration.php</string>
+
+    <!-- Version -->
+    <string name="versionMsg">サンプル v0.1</string>
+    <string name="versionNo">v0.1</string>
+    <string name="action_version">バージョン情報</string>
+    <string name="MenuBtn_Version">バージョン情報</string>
+
+    <!-- MainActivity -->
+    <string name="MenuBtn_Map">情報表示(地図)</string>
+    <string name="MenuBtn_Ranking">各種ランキング</string>
+
+    <!-- MapActivity -->
+    <string name="title_activity_map_test">MapTestActivity</string>
+    <string name="searchView">searchView</string>
+    <string name="searchView_QueryHint">地名を入力してください</string>
+    <string name="Marker_NotRegistered">ここに情報を追加する</string>
+    <string name="dialog_NoData">地点情報が見つかりませんでした</string>
+
+    <!-- UserRegistActivity -->
+    <string name="title_activity_user_regist">UserRegistActivity</string>
+    <string name="Button_Registration">ユーザ登録</string>
+    <string name="caption_mailaddress">メールアドレス</string>
+    <string name="caption_password">パスワード</string>
+
+    <!-- DisplayDetailActivity, AddPlaceActivity -->
+    <string name="title_activity_add_place">AddPlaceActivity</string>
+    <string name="title_activity_display_detail">DisplayDetailActivity</string>
+    <string name="caption_placename">地名</string>
+    <string name="caption_placename_en">地名(英語)</string>
+    <string name="caption_address">住所</string>
+    <string name="caption_telephone">電話番号</string>
+    <string name="caption_remark">備考</string>
+    <string name="Button_AddPlace">追加</string>
+    <string name="Button_AddComment">コメントする</string>
+
+    <!-- SelectRankingActivity -->
+    <string name="MenuBtn_LikeRanking">いいね数ランキング</string>
+    <string name="MenuBtn_CommentRanking">コメント数ランキング</string>
+    <string name="MenuBtn_CreatetimeRanking">登録日時ランキング</string>
+
+</resources>
