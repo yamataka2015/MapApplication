@@ -1,8 +1,5 @@
 package com.example.MapApplication;
 
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +8,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 
+
 //test masuda
+
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+//comment mori
 // test comment by masaki-n 001
 
 
