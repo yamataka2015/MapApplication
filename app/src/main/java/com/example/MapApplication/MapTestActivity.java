@@ -1,13 +1,9 @@
 package com.example.MapApplication;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
-
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
@@ -17,12 +13,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
-import com.google.android.gms.location.LocationServices;
-
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
@@ -34,6 +29,9 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MapTestActivity extends ActionBarActivity
     implements OnConnectionFailedListener, LocationListener, ConnectionCallbacks, OnMapLongClickListener, OnInfoWindowClickListener {
@@ -91,6 +89,7 @@ public class MapTestActivity extends ActionBarActivity
         }
 
         mMap.setOnInfoWindowClickListener(this);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
     }
 
 	@Override
@@ -119,6 +118,7 @@ public class MapTestActivity extends ActionBarActivity
         public boolean onQueryTextSubmit(String searchWord) {
         	// Clear all marker
         	mPlaceInfoList.clear();
+            mMap.clear();
 
         	// Run SearchKeywordTask
             mSearchKeywordTask = new SearchPlaceTask(mMap, mPlaceInfoList, getApplicationContext());

@@ -1,8 +1,5 @@
 package com.example.MapApplication;
 
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,12 +7,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+
+
+//test masuda
+
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+//comment mori
+// test comment by masaki-n 001
+//test madoka
+
+
 public class MainActivity extends AppCompatActivity
+// test comment by masaki-n 002
 {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_main); //nakamura comment
 
 		// Move to UserRegistActivity when first run
 		InputStream in = null;
