@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+<<<<<<< Updated upstream
 
 
 //test masuda
@@ -16,6 +17,9 @@ import java.io.InputStream;
 //comment mori
 // test comment by masaki-n 001
 //test madoka
+=======
+// test comment by masaki-n 001
+>>>>>>> Stashed changes
 
 
 public class MainActivity extends AppCompatActivity
