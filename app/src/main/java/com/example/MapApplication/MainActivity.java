@@ -6,29 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
-<<<<<<< Updated upstream
-
-
-//test masuda
-
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-//comment mori
-// test comment by masaki-n 001
-//test madoka
-=======
-// test comment by masaki-n 001
->>>>>>> Stashed changes
 
 
 public class MainActivity extends AppCompatActivity
-// test comment by masaki-n 002
 {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main); //nakamura comment
+		setContentView(R.layout.activity_main); 
 
 		// Move to UserRegistActivity when first run
 		InputStream in = null;
