@@ -23,4 +23,4 @@
         android:layout_below="@+id/searchView"
         layout="@layout/include_map_test" />
 
-</RelativeLayout><!-- From: file:/C:/Users/MADOKA/Documents/GitHub/MapApplication/app/src/main/res/layout/activity_map_test.xml -->
+</RelativeLayout><!-- From: file:/Users/masaki-n/Documents/Android/MapApplication/app/src/main/res/layout/activity_map_test.xml -->
