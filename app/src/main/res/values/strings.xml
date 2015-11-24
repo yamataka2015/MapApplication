@@ -14,6 +14,12 @@
     <string name="URL_AddComment">http://mail.tym-bit.com/php_e/AddComment.php</string>
     <string name="URL_UserRegist">http://mail.tym-bit.com/php_e/UserRegistration.php</string>
 
+    <string name="URL_AddLikecount">http://mail.tym-bit.com/php_e/AddLikecount.php</string>
+    <string name="URL_AddDisLikecount">http://mail.tym-bit.com/php_e/AddDislikecount.php</string>
+    <string name="URL_DeletePlace">http://mail.tym-bit.com/php_e/DeletePlace.php</string>
+
+
+
     <!-- Version -->
     <string name="versionMsg">Place Information Application Sample</string>
     <string name="versionNo">v0.1</string>
@@ -49,6 +55,8 @@
     <string name="Button_AddComment">Comment</string>
     <string name="title_activity_select_ranking">SelectRankingActivity</string>
     <string name="button">New Button</string>
+    <string name="DisButton">New Button</string>
+    <string name="Delete_Bt">New Button</string>
 
     <!-- SelectRankingActivity -->
     <string name="MenuBtn_LikeRanking">Like counts ranking</string>

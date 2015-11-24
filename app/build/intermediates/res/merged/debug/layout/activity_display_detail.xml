@@ -14,53 +14,59 @@
         android:layout_width="match_parent"
         android:stretchColumns="1">
 
-		<TableRow android:id="@+id/tableRow3">
+        <TableRow android:id="@+id/tableRow1">
+<TextView
+android:id="@+id/TextView_placename_title"
+android:text="@string/caption_placename"
+/>
             <TextView
-                android:id="@+id/TextView_address_title"
-                android:text="@string/caption_address"
-            />
-            <TextView
-                android:id="@+id/TextView_address_value"
-                android:layout_column="2" />
-        </TableRow>
+android:id="@+id/TextView_placename_value"
+android:layout_column="1"
+                android:layout_span="3" />
+</TableRow>
 
-		<TableRow android:id="@+id/tableRow1">
-	        <TextView
-	            android:id="@+id/TextView_placename_title"
-	            android:text="@string/caption_placename"
-	        />
-		    <TextView
-	            android:id="@+id/TextView_placename_value"
-                android:layout_column="2" />
-	    </TableRow>
-	    <TableRow android:id="@+id/tableRow2">
+        <TableRow android:id="@+id/tableRow2">
 	        <TextView
 	            android:id="@+id/TextView_placename_en_title"
 	            android:text="@string/caption_placename_en"
 	        />
 	        <TextView
 	            android:id="@+id/TextView_placename_en_value"
-                android:layout_column="2" />
+                android:layout_column="1"
+                android:layout_span="3" />
 	    </TableRow>
 
-		<TableRow android:id="@+id/tableRow5">
+        <TableRow android:id="@+id/tableRow3">
+            <TextView
+                android:id="@+id/TextView_address_title"
+                android:text="@string/caption_address"
+            />
+            <TextView
+                android:id="@+id/TextView_address_value"
+                android:layout_column="1"
+                android:layout_span="3" />
+        </TableRow>
+
+        <TableRow android:id="@+id/tableRow4">
+<TextView
+android:id="@+id/TextView_Telephone_title"
+android:text="@string/caption_telephone"
+/>
+<TextView
+android:id="@+id/TextView_Telephone_value"
+android:layout_column="1"
+    android:layout_span="3" />
+</TableRow>
+
+        <TableRow android:id="@+id/tableRow5">
 	        <TextView
 	            android:id="@+id/TextView_Remark_title"
 	            android:text="@string/caption_remark"
 	        />
 	        <TextView
 	            android:id="@+id/TextView_Remark_value"
-                android:layout_column="2" />
-	    </TableRow>
-
-		<TableRow android:id="@+id/tableRow4">
-	        <TextView
-	            android:id="@+id/TextView_Telephone_title"
-	            android:text="@string/caption_telephone"
-	        />
-	        <TextView
-	            android:id="@+id/TextView_Telephone_value"
-                android:layout_column="2" />
+                android:layout_column="1"
+                android:layout_span="3" />
 	    </TableRow>
 
         <TableRow
@@ -75,12 +81,33 @@
                 android:layout_column="0"
                 android:onClick="onClickBtniine" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DisButton"
+                android:id="@+id/dislikebutton"
+                android:layout_column="1"
+                android:onClick="onClickdislikebutton" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="delete"
+                android:id="@+id/Delete_Bt"
+                android:layout_column="2"
+                android:onClick="onClickdeletebutton" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
         </TableRow>
 
         <TableRow android:id="@+id/tableRow6">
 	        <ListView
 	            android:id="@+id/ListView_comment"
-	            android:layout_span="4">
+	            android:layout_span="5">
 	        </ListView>
 	    </TableRow>
     </TableLayout>
@@ -100,4 +127,4 @@
         android:text="@string/Button_AddComment"
     />
 
-</RelativeLayout><!-- From: file:/C:/Users/masaki-n/Documents/Android/MapApplication/app/src/main/res/layout/activity_display_detail.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/MADOKA/Documents/GitHub/MapApplication/app/src/main/res/layout/activity_display_detail.xml -->

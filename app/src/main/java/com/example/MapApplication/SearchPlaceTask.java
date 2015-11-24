@@ -115,11 +115,15 @@ public class SearchPlaceTask extends AsyncTask<String, Integer, JSONObject> {
 					pInfo.mLatitude = obj.getDouble("latitude");
 					pInfo.mLongitude = obj.getDouble("longitude");
 					pInfo.mLikeCount = obj.getInt("likecount");
+					pInfo.mDisLikeCount = 0;//obj.getInt("dislikecount");
 					pInfo.mAddress = obj.getString("address");
 					pInfo.mPhonenumber = obj.getString("phonenumber");
 					pInfo.mRemark = obj.getString("remark");
 					pInfo.mProjectCode = obj.getString("projectcode");
 					pInfo.SetMarker(mMap, mPlaceInfoList);
+
+
+
 				}
 			}
 			else

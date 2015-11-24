@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
 public class SearchCommentTask extends AsyncTask<String, Integer, JSONObject> {
 	private Activity mActivity;
 	public SearchCommentTask(Activity activity) {

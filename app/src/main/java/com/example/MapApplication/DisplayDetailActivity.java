@@ -15,17 +15,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import android.widget.ListView;
-import android.widget.ArrayAdapter;
+
 
 public class DisplayDetailActivity extends ActionBarActivity {
 
     private AddCommentTask mAddCommentTask;
     private SearchCommentTask mSearchCommentTask;
     private PlaceInfo mPlaceInfo;
+	private AddLikecount mAddLikecount;
+	private AddDisLikecount mAddDisLikecount;
+	private DeletePlace mDeletePlace;
 
 	private Button bt;
-	private int count1;
+	private Button di;
+	private int count = 1;
+	private int discount = 1;
+	private Button de;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +52,18 @@ public class DisplayDetailActivity extends ActionBarActivity {
 		txtView_remark.setText(pInfo.mRemark);
 		mPlaceInfo = pInfo;
 
-		bt = (Button)findViewById(R.id.btniine);  //ボタン
-		bt.setWidth(400);//ボタンの高さと横幅a
-		bt.setHeight(20);//a
-        bt.setText("like");
+		bt = (Button)findViewById(R.id.btniine);  //likeボタン
+		bt.setWidth(350);//likeボタンの高さと横幅
+		bt.setHeight(20);//
+		bt.setText("like：" + pInfo.mLikeCount); //likeボタンのテキスト
+
+		di = (Button)findViewById(R.id.dislikebutton);  //dislikeボタン
+		di.setWidth(350);//dislikeボタンの高さと横幅
+		di.setHeight(20);//
+		di.setText("dislike：" + pInfo.mDisLikeCount); //dislikeボタンのテキスト
+
+		de = (Button)findViewById(R.id.Delete_Bt);
 	;
-
-
-
 
 		// Get Comment List
 		String strId = Integer.toString(pInfo.mPlaceId);
@@ -92,26 +101,47 @@ public class DisplayDetailActivity extends ActionBarActivity {
         mAddCommentTask.execute(strArray);
 	}
 
+
+
 	public void onClickBtniine(View v)
 	{
 
-		if(v == bt){
-			count1++;
-			bt.setText("like：" + count1);
+		if(v == bt) {
+			String strId = Integer.toString(mPlaceInfo.mPlaceId);
+			mAddLikecount = new AddLikecount(DisplayDetailActivity.this, getString(R.string.URL_AddLikecount));
+			mAddLikecount.execute(strId);   //AddLikecount を実行
+			int count2 =  mPlaceInfo.mLikeCount+count;  //likeの数を増やす
+			bt.setText("like：" + count2 );
+			count++;
+
+			//bt.setEnabled(false); //ボタンを無効
 		}
+	}
+	public void onClickdislikebutton(View v)
+	{
 
+		if(v == di) {
 
-		Date date = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		String[] strArray = new String[4];
-		strArray[0] = Integer.toString(mPlaceInfo.mPlaceId);
-		strArray[1] = "1"; //TODO:ユーザID（端末保持予定）
-		strArray[2] = sdf.format(date);
-		strArray[3] = "like";
-		mAddCommentTask = new AddCommentTask(DisplayDetailActivity.this, getString(R.string.URL_AddComment));
-		mAddCommentTask.execute(strArray);
+			String strId = Integer.toString(mPlaceInfo.mPlaceId);
+			mAddDisLikecount = new AddDisLikecount(DisplayDetailActivity.this, getString(R.string.URL_AddDisLikecount));
+			mAddDisLikecount.execute(strId);   //AdddisLikecount を実行
+			int discount2 =  mPlaceInfo.mDisLikeCount+discount;  //dislikeの数を増やす
+			di.setText("dislike：" + discount2);
+			discount++;
 
-		bt.setEnabled(false); //ボタンを無効
+			//di.setEnabled(false); //ボタンを無効
+		}
 	}
 
+	public void onClickdeletebutton(View v){
+
+		if(v == de){
+
+			String strId = Integer.toString(mPlaceInfo.mPlaceId);
+			mDeletePlace = new DeletePlace(DisplayDetailActivity.this, getString(R.string.URL_DeletePlace));
+			mDeletePlace.execute(strId);
+
+		}
+
+	}
 }

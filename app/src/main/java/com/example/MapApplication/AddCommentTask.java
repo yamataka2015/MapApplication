@@ -21,6 +21,7 @@ public class AddCommentTask extends AsyncTask<String, Integer, JSONObject> {
 	private Context mContext;
     private ProgressDialog mDialog;
     private String mURL;
+	public int  mCommentid;
 
 	public AddCommentTask (Context context, String url) {
 		super();
@@ -109,6 +110,15 @@ public class AddCommentTask extends AsyncTask<String, Integer, JSONObject> {
 	}
 
 	protected void onPostExecute(JSONObject jsonObject) {
+
+		try {
+			PlaceInfo pInfo = new PlaceInfo();
+			pInfo.mCommentid = jsonObject.getInt("commentid");
+		}
+		catch (JSONException e) {
+			e.printStackTrace();
+		}
+
 		mDialog.dismiss();
 		//TODO:string.xml化
 		Toast toast = Toast.makeText(mContext, "コメントを追加しました", Toast.LENGTH_LONG);

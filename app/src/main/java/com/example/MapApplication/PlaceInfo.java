@@ -22,6 +22,8 @@ public class PlaceInfo implements Serializable {
 	public String mPhonenumber;
 	public String mRemark;
 	public String mProjectCode;
+    public int mDisLikeCount;
+	public int mCommentid;
 
 	public PlaceInfo() {
 		// TODO:Initialize arguments
@@ -71,8 +73,12 @@ public class PlaceInfo implements Serializable {
         pClone.mAddress = this.mAddress;
         pClone.mPhonenumber = this.mPhonenumber;
         pClone.mLikeCount = this.mLikeCount;
+		pClone.mDisLikeCount = this.mDisLikeCount;
         pClone.mProjectCode = this.mProjectCode;
         pClone.mRemark = this.mRemark;
+
+		pClone.mCommentid = this.mCommentid;
+
 		return pClone;
 	}
 

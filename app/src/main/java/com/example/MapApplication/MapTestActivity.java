@@ -253,10 +253,11 @@ public class MapTestActivity extends ActionBarActivity
             }
             catch(RuntimeException e)
             {
-            	Toast t = Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG);
+                Toast t = Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG);
                 t.show();
             	e.getStackTrace();
             }
+
 		}
 	}
 }
