@@ -23,4 +23,16 @@
         android:layout_below="@+id/searchView"
         layout="@layout/include_map_test" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="検索結果リスト"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/map"
+        android:layout_alignRight="@+id/map"
+        android:layout_alignEnd="@+id/map"
+        android:layout_marginRight="56dp"
+        android:layout_marginEnd="56dp"
+        android:onClick="onClickBtnSearchingResult2" />
+
 </RelativeLayout>

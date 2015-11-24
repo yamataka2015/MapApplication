@@ -68,6 +68,10 @@
             android:name="com.example.MapApplication.SelectRankingActivity"
             android:label="@string/title_activity_select_ranking" >
         </activity>
+        <activity
+            android:name="com.example.MapApplication.SearchingResult"
+            android:label="@string/title_activity_searching_result" >
+        </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

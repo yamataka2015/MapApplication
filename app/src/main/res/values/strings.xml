@@ -62,6 +62,8 @@
     <string name="MenuBtn_LikeRanking">Like counts ranking</string>
     <string name="MenuBtn_CommentRanking">Comment counts ranking</string>
     <string name="MenuBtn_CreatetimeRanking">Create Time ranking</string>
+    <string name="title_activity_searching_result">SearchingResult</string>
+    <string name="action_settings">Settings</string>
 
 
 

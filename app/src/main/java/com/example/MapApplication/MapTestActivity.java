@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
@@ -228,6 +229,14 @@ public class MapTestActivity extends ActionBarActivity
         }
 
 	}
+
+        //検索結果リストボタンを押すとリスト表示にインテント
+    public void onClickBtnSearchingResult2(View v) {
+        Intent intent = new Intent(this, SearchingResult.class);
+        intent.putExtra("MPLACEINFOLIST",mPlaceInfoList.toString());
+        startActivity(intent);
+    }
+
 
 	@Override
 	public void onInfoWindowClick(Marker marker) {

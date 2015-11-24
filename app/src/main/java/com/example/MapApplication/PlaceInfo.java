@@ -62,6 +62,11 @@ public class PlaceInfo implements Serializable {
 		list.add(this);
 	}
 
+	//場所の文字列を返す
+	public String toString(){
+		return this.mPlacename;
+	}
+
 	public PlaceInfo getSeralizable() {
 		PlaceInfo pClone = new PlaceInfo();
 		// mMarker:null
