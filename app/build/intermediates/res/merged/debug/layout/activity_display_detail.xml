@@ -127,4 +127,4 @@ android:layout_column="1"
         android:text="@string/Button_AddComment"
     />
 
-</RelativeLayout><!-- From: file:/C:/Android_Work/Git/Sprint2/MapApplication/app/src/main/res/layout/activity_display_detail.xml -->
+</RelativeLayout><!-- From: file:/C:/Android%20Work/Git/sprint2/MapApplication/app/src/main/res/layout/activity_display_detail.xml -->

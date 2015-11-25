@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -19,6 +20,7 @@ import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListe
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
@@ -35,7 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MapTestActivity extends ActionBarActivity
-    implements OnConnectionFailedListener, LocationListener, ConnectionCallbacks, OnMapLongClickListener, OnInfoWindowClickListener {
+    implements OnConnectionFailedListener, LocationListener, ConnectionCallbacks, OnMapLongClickListener, OnInfoWindowClickListener, View.OnClickListener {
 
     /**
      * Note that this may be null if the Google Play services APK is not available.
@@ -46,6 +48,9 @@ public class MapTestActivity extends ActionBarActivity
     private SearchPlaceTask mSearchKeywordTask;
     private Marker mAddMarker = null;
     private List<PlaceInfo> mPlaceInfoList;
+    private Button zoombutton1;
+    private Button zoombutton2;
+    private Button zoombutton3;
 
     private static final LocationRequest REQUEST = LocationRequest.create()
         .setInterval(5000)// 5 seconds
@@ -91,6 +96,13 @@ public class MapTestActivity extends ActionBarActivity
 
         mMap.setOnInfoWindowClickListener(this);
         mMap.getUiSettings().setZoomControlsEnabled(true);
+
+        zoombutton1 = (Button)findViewById(R.id.zoom_button1);
+        zoombutton1.setOnClickListener(this);
+        zoombutton2 = (Button)findViewById(R.id.zoom_button2);
+        zoombutton2.setOnClickListener(this);
+        zoombutton3 = (Button)findViewById(R.id.zoom_button3);
+        zoombutton3.setOnClickListener(this);
     }
 
 	@Override
@@ -269,5 +281,23 @@ public class MapTestActivity extends ActionBarActivity
 
 		}
 	}
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.zoom_button1:
+                CameraUpdate cu = CameraUpdateFactory.newLatLngZoom( new LatLng(mMap.getCameraPosition().target.latitude, mMap.getCameraPosition().target.longitude), 15);
+                mMap.moveCamera(cu);
+                break;
+            case R.id.zoom_button2:
+                CameraUpdate cu2 = CameraUpdateFactory.newLatLngZoom( new LatLng(mMap.getCameraPosition().target.latitude, mMap.getCameraPosition().target.longitude), 14);
+                mMap.moveCamera(cu2);
+                break;
+            case R.id.zoom_button3:
+                CameraUpdate cu3 = CameraUpdateFactory.newLatLngZoom( new LatLng(mMap.getCameraPosition().target.latitude, mMap.getCameraPosition().target.longitude), 13);
+                mMap.moveCamera(cu3);
+                break;
+        }
+    }
 }
 

@@ -35,4 +35,31 @@
         android:layout_marginEnd="56dp"
         android:onClick="onClickBtnSearchingResult2" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200m"
+        android:id="@+id/zoom_button1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500m"
+        android:id="@+id/zoom_button2"
+        android:layout_alignBottom="@+id/map"
+        android:layout_toRightOf="@+id/zoom_button1"
+        android:layout_toEndOf="@+id/zoom_button1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1km"
+        android:id="@+id/zoom_button3"
+        android:layout_alignBottom="@+id/map"
+        android:layout_toRightOf="@+id/zoom_button2"
+        android:layout_toEndOf="@+id/zoom_button2" />
+
 </RelativeLayout>
