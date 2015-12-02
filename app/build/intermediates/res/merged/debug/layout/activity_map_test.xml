@@ -62,4 +62,4 @@
         android:layout_toRightOf="@+id/zoom_button2"
         android:layout_toEndOf="@+id/zoom_button2" />
 
-</RelativeLayout><!-- From: file:/C:/Android%20Work/Git/sprint2/MapApplication/app/src/main/res/layout/activity_map_test.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/masaki-n/Documents/Android/MapApplication/app/src/main/res/layout/activity_map_test.xml -->

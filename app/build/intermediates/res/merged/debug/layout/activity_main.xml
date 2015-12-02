@@ -33,4 +33,4 @@
         android:onClick="onClickBtnVersion"
         android:text="@string/MenuBtn_Version" />
 
-</RelativeLayout><!-- From: file:/C:/Android%20Work/Git/sprint2/MapApplication/app/src/main/res/layout/activity_main.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/masaki-n/Documents/Android/MapApplication/app/src/main/res/layout/activity_main.xml -->
