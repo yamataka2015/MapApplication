@@ -115,12 +115,31 @@ public class SearchPlaceTask extends AsyncTask<String, Integer, JSONObject> {
 					pInfo.mLatitude = obj.getDouble("latitude");
 					pInfo.mLongitude = obj.getDouble("longitude");
 					pInfo.mLikeCount = obj.getInt("likecount");
-					pInfo.mDisLikeCount = 0;//obj.getInt("dislikecount");
+					pInfo.mDisLikeCount = obj.getInt("dislikecount");
 					pInfo.mAddress = obj.getString("address");
 					pInfo.mPhonenumber = obj.getString("phonenumber");
 					pInfo.mRemark = obj.getString("remark");
 					pInfo.mProjectCode = obj.getString("projectcode");
-					pInfo.SetMarker(mMap, mPlaceInfoList);
+
+
+					if(pInfo.mLikeCount - pInfo.mDisLikeCount > 0 && "".equals(pInfo.mPlacename)){   //likecountが多く、mplacenameにデータがない
+						pInfo.SetMarker_RED_NO(mMap, mPlaceInfoList);
+					}
+					else if(pInfo.mLikeCount - pInfo.mDisLikeCount > 0){//likecountが多い
+						pInfo.SetMarker_RED(mMap, mPlaceInfoList);
+					}
+					else if(pInfo.mLikeCount - pInfo.mDisLikeCount == 0 && "".equals(pInfo.mPlacename)){//likecount,dislikecountが０かその二つの差が０,mplacenameにデータがない
+						pInfo.SetMarker_YELLOW_NO(mMap, mPlaceInfoList);
+					}
+					else if(pInfo.mLikeCount - pInfo.mDisLikeCount == 0){//likecount,dislikecountが０かその二つの差が０
+						pInfo.SetMarker_YELLOW(mMap, mPlaceInfoList);
+					}
+					else if(pInfo.mLikeCount - pInfo.mDisLikeCount < 0 && "".equals(pInfo.mPlacename)){//dialikecountが多く、mplacenameにデータがない
+						pInfo.SetMarker_BLUE_NO(mMap, mPlaceInfoList);
+					}
+					else if(pInfo.mLikeCount - pInfo.mDisLikeCount < 0){//dislikecountが多い
+						pInfo.SetMarker_BLUE(mMap, mPlaceInfoList);
+					}
 
 
 
@@ -128,7 +147,7 @@ public class SearchPlaceTask extends AsyncTask<String, Integer, JSONObject> {
 			}
 			else
 			{
-                Toast toast = Toast.makeText(mContext, mContext.getApplicationContext().getString(R.string.dialog_NoData), Toast.LENGTH_LONG);
+				Toast toast = Toast.makeText(mContext, mContext.getApplicationContext().getString(R.string.dialog_NoData), Toast.LENGTH_LONG);
                 toast.show();
 			}
 		} catch (JSONException e) {

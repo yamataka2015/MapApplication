@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -59,6 +60,42 @@ public class PlaceInfo implements Serializable {
 	public void SetMarker(GoogleMap map, List<PlaceInfo> list) {
 		mMarker = map.addMarker(new MarkerOptions().position(getLatLng())
 				.title(mPlacename).snippet(mPlacename_en));
+		list.add(this);
+	}
+
+	public void SetMarker_RED(GoogleMap map, List<PlaceInfo> list) {
+		mMarker = map.addMarker(new MarkerOptions().position(getLatLng())
+				.title(mPlacename).snippet(mPlacename_en).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+		list.add(this);
+	}
+
+	public void SetMarker_RED_NO(GoogleMap map, List<PlaceInfo> list) {
+		mMarker = map.addMarker(new MarkerOptions().position(getLatLng())
+				.title("no data").snippet(mPlacename_en).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+		list.add(this);
+	}
+
+	public void SetMarker_BLUE(GoogleMap map, List<PlaceInfo> list) {
+		mMarker = map.addMarker(new MarkerOptions().position(getLatLng())
+				.title(mPlacename).snippet(mPlacename_en).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+		list.add(this);
+	}
+
+	public void SetMarker_BLUE_NO(GoogleMap map, List<PlaceInfo> list) {
+		mMarker = map.addMarker(new MarkerOptions().position(getLatLng())
+				.title("no data").snippet(mPlacename_en).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+		list.add(this);
+	}
+
+	public void SetMarker_YELLOW(GoogleMap map, List<PlaceInfo> list) {
+		mMarker = map.addMarker(new MarkerOptions().position(getLatLng())
+				.title(mPlacename).snippet(mPlacename_en).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+		list.add(this);
+	}
+
+	public void SetMarker_YELLOW_NO(GoogleMap map, List<PlaceInfo> list) {
+		mMarker = map.addMarker(new MarkerOptions().position(getLatLng())
+				.title("no data").snippet(mPlacename_en).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
 		list.add(this);
 	}
 
