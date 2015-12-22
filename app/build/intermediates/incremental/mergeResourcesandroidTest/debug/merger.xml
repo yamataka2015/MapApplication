@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="C:\Android Work\Git\sprint3-1\MapApplication\app\src\androidTest\res"/><source path="C:\Android Work\Git\sprint3-1\MapApplication\app\build\generated\res\rs\androidTest\debug"/><source path="C:\Android Work\Git\sprint3-1\MapApplication\app\build\generated\res\resValues\androidTest\debug"/></dataSet><mergedItems/></merger>
+=======
+<merger version="3"><dataSet config="main"><source path="C:\Android_Work\Git\Sprint3\MapApplication\app\src\androidTest\res"/><source path="C:\Android_Work\Git\Sprint3\MapApplication\app\build\generated\res\rs\androidTest\debug"/><source path="C:\Android_Work\Git\Sprint3\MapApplication\app\build\generated\res\resValues\androidTest\debug"/></dataSet><mergedItems/></merger>
+>>>>>>> dc89eca6bb64bc12d1c862e06593d11b0f9d5005
