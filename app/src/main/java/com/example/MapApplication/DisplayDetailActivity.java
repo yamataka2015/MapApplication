@@ -31,6 +31,7 @@ public class DisplayDetailActivity extends ActionBarActivity {
 	private int count = 1;
 	private int discount = 1;
 	private Button de;
+	private Button an;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +64,7 @@ public class DisplayDetailActivity extends ActionBarActivity {
 		di.setText("dislike：" + pInfo.mDisLikeCount); //dislikeボタンのテキスト
 
 		de = (Button)findViewById(R.id.Delete_Bt);
-	;
+	;   an = (Button)findViewById(R.id.Btn_an);
 
 		// Get Comment List
 		String strId = Integer.toString(pInfo.mPlaceId);
@@ -143,5 +144,15 @@ public class DisplayDetailActivity extends ActionBarActivity {
 
 		}
 
+	}
+	// 「analyze」ボタン押下時イベント
+	public void onClickBtnAn(View v) {
+		if (v == an) {
+
+			Intent intent = new Intent(this, Analyze.class);
+			intent.putExtra("LIKECOUNT", mPlaceInfo.mLikeCount);
+			intent.putExtra("DISLIKECOUNT",mPlaceInfo.mDisLikeCount);
+			startActivity(intent);
+		}
 	}
 }

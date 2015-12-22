@@ -66,6 +66,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_user_regist_display">UserRegistDisplay</string>
 
-
+    <!--Analyze-->
+    <string name="title_activity_analyze">Analyze</string>
 
 </resources>

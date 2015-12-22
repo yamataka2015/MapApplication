@@ -51,8 +51,4 @@
     </android.support.v7.internal.widget.ActionBarContainer>
 
 </android.support.v7.internal.widget.ActionBarOverlayLayout>
-<<<<<<< HEAD
-<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/mnc-release/frameworks/support/v7/appcompat/res/layout/abc_screen_toolbar.xml --><!-- From: file:/C:/Android%20Work/Git/sprint3-1/MapApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/layout/abc_screen_toolbar.xml -->
-=======
-<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/mnc-release/frameworks/support/v7/appcompat/res/layout/abc_screen_toolbar.xml --><!-- From: file:/C:/Android_Work/Git/Sprint3/MapApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/layout/abc_screen_toolbar.xml -->
->>>>>>> dc89eca6bb64bc12d1c862e06593d11b0f9d5005
+<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/mnc-release/frameworks/support/v7/appcompat/res/layout/abc_screen_toolbar.xml --><!-- From: file:/C:/Users/MADOKA/Documents/GitHub/MapApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/layout/abc_screen_toolbar.xml -->

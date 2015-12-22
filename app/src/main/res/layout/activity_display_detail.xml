@@ -22,7 +22,7 @@ android:text="@string/caption_placename"
             <TextView
 android:id="@+id/TextView_placename_value"
 android:layout_column="1"
-                android:layout_span="3" />
+                android:layout_span="2" />
 </TableRow>
 
         <TableRow android:id="@+id/tableRow2">
@@ -33,7 +33,7 @@ android:layout_column="1"
 	        <TextView
 	            android:id="@+id/TextView_placename_en_value"
                 android:layout_column="1"
-                android:layout_span="3" />
+                android:layout_span="2" />
 	    </TableRow>
 
         <TableRow android:id="@+id/tableRow3">
@@ -44,7 +44,7 @@ android:layout_column="1"
             <TextView
                 android:id="@+id/TextView_address_value"
                 android:layout_column="1"
-                android:layout_span="3" />
+                android:layout_span="2" />
         </TableRow>
 
         <TableRow android:id="@+id/tableRow4">
@@ -55,7 +55,7 @@ android:text="@string/caption_telephone"
 <TextView
 android:id="@+id/TextView_Telephone_value"
 android:layout_column="1"
-    android:layout_span="3" />
+    android:layout_span="2" />
 </TableRow>
 
         <TableRow android:id="@+id/tableRow5">
@@ -66,7 +66,7 @@ android:layout_column="1"
 	        <TextView
 	            android:id="@+id/TextView_Remark_value"
                 android:layout_column="1"
-                android:layout_span="3" />
+                android:layout_span="2" />
 	    </TableRow>
 
         <TableRow
@@ -89,25 +89,38 @@ android:layout_column="1"
                 android:layout_column="1"
                 android:onClick="onClickdislikebutton" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="delete"
-                android:id="@+id/Delete_Bt"
-                android:layout_column="2"
-                android:onClick="onClickdeletebutton" />
+
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analyze"
+                android:id="@+id/Btn_an"
+                android:layout_column="0"
+                android:onClick="onClickBtnAn"
+                android:nestedScrollingEnabled="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="delete"
+                android:id="@+id/Delete_Bt"
+                android:layout_column="1"
+                android:onClick="onClickdeletebutton" />
+
+
         </TableRow>
 
         <TableRow android:id="@+id/tableRow6">
 	        <ListView
 	            android:id="@+id/ListView_comment"
-	            android:layout_span="5">
+	            android:layout_span="9">
 	        </ListView>
 	    </TableRow>
     </TableLayout>

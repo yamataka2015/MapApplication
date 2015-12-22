@@ -30,8 +30,4 @@
         android:text="@string/MenuBtn_CreatetimeRanking" />
 
 </RelativeLayout>
-<<<<<<< HEAD
-<!-- From: file:/C:/Android%20Work/Git/sprint3-1/MapApplication/app/src/main/res/layout/activity_select_ranking.xml -->
-=======
-<!-- From: file:/C:/Android_Work/Git/Sprint3/MapApplication/app/src/main/res/layout/activity_select_ranking.xml -->
->>>>>>> dc89eca6bb64bc12d1c862e06593d11b0f9d5005
+<!-- From: file:/C:/Users/MADOKA/Documents/GitHub/MapApplication/app/src/main/res/layout/activity_select_ranking.xml -->

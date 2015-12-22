@@ -26,7 +26,7 @@
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDmLSqojmIBv__vByUAasRPy4GDnH8iEJM" />
+            android:value="AIzaSyBwm2mXrZ96eSHkPXJMBiXkG2H240cs40o" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -70,6 +70,10 @@
         <activity
             android:name=".UserRegistDisplay"
             android:label="@string/title_activity_user_regist_display" >
+        </activity>
+        <activity
+            android:name=".Analyze"
+            android:label="@string/title_activity_analyze" >
         </activity>
     </application>
 
