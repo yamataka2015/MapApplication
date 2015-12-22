@@ -15,10 +15,22 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/SearchingResult"
+        android:clickable="true"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="57dp" />
+        android:layout_marginTop="57dp"
+        android:onClick="onClickTxt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/test"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/SearchingResult"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
-<!-- From: file:/C:/Users/masaki-n/Documents/Android/MapApplication/app/src/main/res/layout/activity_searching_result.xml -->
+<!-- From: file:/C:/Android_Work/Git/Sprint3/MapApplication/app/src/main/res/layout/activity_searching_result.xml -->

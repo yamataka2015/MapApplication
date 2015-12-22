@@ -2,6 +2,7 @@ package com.example.MapApplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -25,6 +26,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -51,6 +53,24 @@ public class MapTestActivity extends ActionBarActivity
     private Button zoombutton1;
     private Button zoombutton2;
     private Button zoombutton3;
+
+    //public double mLatitude;
+    public int ClickCondition;
+    public int ClickCondition2;
+
+    public double Lattest;
+    public double Lngtest;
+
+    /*追加するコード
+    public int ClickCondition;//TextViewのクリック状態を表す変数
+        public void onIntent() {
+            if(ClickCondition == 1){
+                //クリックしたテキストの座標に移動するコードを記述
+            }
+
+    }
+    */
+
 
     private static final LocationRequest REQUEST = LocationRequest.create()
         .setInterval(5000)// 5 seconds
@@ -165,10 +185,27 @@ public class MapTestActivity extends ActionBarActivity
     private void setUpMap() {
     	mMap.setMyLocationEnabled(true);
 
+        Intent intent = getIntent();
+        ClickCondition2 = intent.getIntExtra("CLICKCONDITION2",0);//SearchingResultのClickCondition2を受け取る
+        Lattest = intent.getDoubleExtra("mtest",0);
+        Lngtest = intent.getDoubleExtra("m2test",0);
+        if(ClickCondition2 == 1){//SearchingResultでTextViewがクリックされたとき
+           // if(mPlaceInfoList.size() > 0) {
+                LatLng latlng = new LatLng(Lattest,Lngtest);//場所の変数に置き換える
+               mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng, 17));
+           // }
+           // else{
+               // int i = mPlaceInfoList.size();
+                //LatLng latlng = new LatLng(0,0);//現在は富山情報ビジネス専門学校の座標を入れているため、場所の変数に置き換える
+               // mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng, 17));
+           // }
+        }
+        else {
         // 現在地にカメラを移動する
-        mLocationClient = new GoogleApiClient.Builder(getApplicationContext()).addApi(LocationServices.API).addConnectionCallbacks(this).addOnConnectionFailedListener(this).build();
-        if(mLocationClient != null){
-            mLocationClient.connect();
+            mLocationClient = new GoogleApiClient.Builder(getApplicationContext()).addApi(LocationServices.API).addConnectionCallbacks(this).addOnConnectionFailedListener(this).build();
+            if (mLocationClient != null) {
+                mLocationClient.connect();
+            }
         }
     }
 
@@ -242,10 +279,17 @@ public class MapTestActivity extends ActionBarActivity
 
 	}
 
-        //検索結果リストボタンを押すとリスト表示にインテント
+
+
+  //検索結果リストボタンを押すとリスト表示にインテント
     public void onClickBtnSearchingResult2(View v) {
+        ClickCondition = 1;
         Intent intent = new Intent(this, SearchingResult.class);
         intent.putExtra("MPLACEINFOLIST",mPlaceInfoList.toString());
+        intent.putExtra("m",mPlaceInfoList.get(0).mLatitude);
+        intent.putExtra("m2",mPlaceInfoList.get(0).mLongitude);
+        //intent.putExtra("test",100);
+        intent.putExtra("CLICKCONDITION",ClickCondition);
         startActivity(intent);
     }
 
