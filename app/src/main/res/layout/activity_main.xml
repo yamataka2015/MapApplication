@@ -33,4 +33,16 @@
         android:onClick="onClickBtnVersion"
         android:text="@string/MenuBtn_Version" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Information"
+        android:id="@+id/btnInfo"
+        android:layout_below="@+id/btnRanking"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnRanking"
+        android:layout_alignEnd="@+id/btnRanking"
+        android:onClick="onClickBtnInfo" />
+
 </RelativeLayout>

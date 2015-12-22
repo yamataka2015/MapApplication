@@ -61,6 +61,8 @@ public class MapTestActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_test);
+        // Initial posision data set
+        LatLng latlng = new LatLng(36.72531, 137.096817);
 
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
@@ -70,6 +72,7 @@ public class MapTestActivity extends ActionBarActivity
 	                    .getMap();
 	            if(mMap != null)
 	            {
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng,17));
 	            	break;
 	            }
         	}

@@ -12,6 +12,7 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity
 {
+	String str = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity
 		try
 		{
 			in = openFileInput(getString(R.string.filename));
+			str = in.toString();
 
 		}
 		catch(FileNotFoundException e)
@@ -85,6 +87,15 @@ public class MainActivity extends AppCompatActivity
 	{
         Intent intent = new Intent(this, SelectRankingActivity.class);
         startActivity(intent);
+	}
+
+	//「ユーザー端末情報の表示ボタン押下時イベント」
+	public void onClickBtnInfo(View v)
+	{
+		Intent intent = new Intent(this, UserRegistDisplay.class);
+		intent.putExtra("USERID", str);
+		startActivity(intent);
+
 	}
 
 	public void onClickBtnVersion(View v)
