@@ -5,4 +5,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
-<!-- From: file:/C:/Users/MADOKA/Documents/GitHub/MapApplication/app/src/main/res/menu/menu_user_regist_display.xml -->
+<!-- From: file:/C:/Users/masaki-n/Documents/Android/MapApplication/app/src/main/res/menu/menu_user_regist_display.xml -->

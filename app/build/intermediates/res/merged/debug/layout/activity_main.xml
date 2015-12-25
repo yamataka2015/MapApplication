@@ -45,4 +45,4 @@
         android:layout_alignEnd="@+id/btnRanking"
         android:onClick="onClickBtnInfo" />
 
-</RelativeLayout><!-- From: file:/C:/Users/MADOKA/Documents/GitHub/MapApplication/app/src/main/res/layout/activity_main.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/masaki-n/Documents/Android/MapApplication/app/src/main/res/layout/activity_main.xml -->

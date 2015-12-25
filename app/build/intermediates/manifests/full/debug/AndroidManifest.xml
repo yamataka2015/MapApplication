@@ -32,7 +32,7 @@
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBwm2mXrZ96eSHkPXJMBiXkG2H240cs40o" />
+            android:value="AIzaSyDIWpKbRruL77Tnc_GAT3tKjtijWo75jVI" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
